@@ -2,21 +2,21 @@
   <div class="root d-flex flex-column rounded-xl mx-auto">
     <div class="btns d-flex flex-row">
       <div
-        class="optn d-flex sign-in mx-auto h-100 w-100 justify-center align-center"
-        :class="{ active: !reg, passive: reg, 'right-bor': reg }"
+        class="optn d-flex sign-in mx-auto h-100 w-100 justify-center align-center rounded-be-xl"
+        :class="{ active: !reg, passive: reg, 'right-bar': reg }"
         @click="reg = false"
       >
         Sign-In
       </div>
       <div
-        class="optn d-flex register mx-auto h-100 w-100 justify-center align-center"
-        :class="{ active: reg, passive: !reg, 'left-bor': !reg }"
+        class="optn d-flex register mx-auto h-100 w-100 justify-center align-center rounded-bs-xl"
+        :class="{ active: reg, passive: !reg, 'left-bar': !reg }"
         @click="reg = true"
       >
         Register
       </div>
     </div>
-    <div v-if="reg" class="form mx-auto w-75 d-flex flex-column pa-8">
+    <div v-if="reg" class="form mx-auto w-75 d-flex flex-column pa-8 my-auto">
       <v-text-field v-model="username" label="Username" variant="outlined">
       </v-text-field>
       <v-text-field v-model="email" label="Email-ID" variant="outlined">
@@ -27,7 +27,7 @@
     </div>
     <div
       v-if="!reg"
-      class="form mx-auto w-75 d-flex flex-column pa-8 justify-center"
+      class="form mx-auto w-75 d-flex flex-column pa-8 justify-center my-auto"
     >
       <v-text-field v-model="username" label="Username" variant="outlined">
       </v-text-field>
@@ -59,14 +59,18 @@ export default {
   border: 3px white solid;
 }
 
-.right-bor {
+.right-bar {
   border-right: 1px white solid;
 }
 
-.left-bor {
+.left-bar {
   border-left: 1px white solid;
 }
 
+.optn { 
+  cursor: pointer;
+  font-size: large;
+}
 .btns {
   height: 50px;
 }

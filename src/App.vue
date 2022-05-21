@@ -15,3 +15,10 @@ export default {
   }),
 };
 </script>
+
+<style>
+@font-face {
+  font-family: "Samarkan";
+  src: url(./assets/fonts/Samarkan.TTF) format("truetype");
+}
+</style>

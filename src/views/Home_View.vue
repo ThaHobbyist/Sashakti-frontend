@@ -1,12 +1,16 @@
 <template>
-  <div class="root">
-    <div class="heading">
-      <h3 class="heading_text">SASHAKTI</h3>
-      <h5 class="subheading_text">
-        An Indegenous Learning and Working Platform
-      </h5>
+  <div class="root d-flex flex-column h-100 justify-center align-center">
+    <div class="heading text-center">
+      <div class="heading_text">SASHAKTI</div>
+      <div class="subheading_text">
+        A Learning and Earning Platform for Hard Times
+      </div>
     </div>
-    <div class="reg"><router-link to="/login">Login/Register</router-link></div>
+    <v-btn class="reg mt-15 rounded-pill" variant="outlined">
+      <router-link class="text-white" to="/login" style="text-decoration: none">
+        GET STARTED <v-icon icon="mdi-arrow-right" />
+      </router-link>
+    </v-btn>
   </div>
 </template>
 
@@ -15,3 +19,10 @@ export default {
   name: "HomeView",
 };
 </script>
+
+<style>
+.heading_text {
+  font-family: Samarkan;
+  font-size: 150px;
+}
+</style>
