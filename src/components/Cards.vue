@@ -1,5 +1,5 @@
 <template>
-  <v-card variant="outlined" class="root ma-5 rounded-xl">
+  <v-card variant="outlined" class="root ma-10 rounded-xl">
     <v-card-title>
       {{ name }}
     </v-card-title>

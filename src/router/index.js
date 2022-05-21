@@ -7,7 +7,6 @@ import LoginView from "../views/LoginView.vue";
 import LandingView from "../views/LandingView.vue";
 import CoursesView from "../views/CoursesView.vue";
 import JobsView from "../views/JobsView.vue";
-import ProfileView from "../views/ProfileView.vue";
 
 const routes = [{
         path: "/",
@@ -33,11 +32,6 @@ const routes = [{
         path: "/jobs",
         name: "jobs",
         component: JobsView,
-    },
-    {
-        path: "/profile",
-        name: "profile",
-        component: ProfileView,
     },
 ];
 
