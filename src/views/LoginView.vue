@@ -1,6 +1,13 @@
 <template>
-  <div class="root">
-    <AuthBox />
+  <div class="root h-100 d-flex justify-center align-center">
+    <AuthBox
+      :class="{
+        'max-width': !this.$vuetify.display.smAndDown,
+        'w-75': this.$vuetify.display.smAndDown,
+        'ma-10': this.$vuetify.display.smAndDown,
+      }"
+      class="h-50"
+    />
   </div>
 </template>
 
@@ -11,5 +18,14 @@ export default {
   // eslint-disable-next-line vue/multi-word-component-names
   name: "Loginview",
   components: { AuthBox },
+  mounted() {
+    console.log(this.$vuetify.display.smAndDown);
+  },
 };
 </script>
+
+<style>
+.max-width {
+  width: 40%;
+}
+</style>
