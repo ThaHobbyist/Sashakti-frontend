@@ -15,11 +15,11 @@
           label="Phone"
           variant="outlined"
         ></v-text-field>
-        <v-text-fieldarea
+        <v-textarea
           v-model="address"
           label="Address"
           variant="outlined"
-        ></v-text-fieldarea>
+        ></v-textarea>
         <v-text-field
           v-model="city"
           label="City"
@@ -94,11 +94,11 @@
           label="Phone"
           variant="outlined"
         ></v-text-field>
-        <v-text-fieldarea
+        <v-textarea
           v-model="address"
           label="Address"
           variant="outlined"
-        ></v-text-fieldarea>
+        ></v-textarea>
         <v-text-field
           v-model="city"
           label="City"
