@@ -3,7 +3,7 @@
     <div class="heading text-center">
       <div class="heading_text">SASHAKTI</div>
       <div class="subheading_text">
-        A Learning and Earning Platform for Hard Times
+        Learning and Working made easy in Post-War
       </div>
     </div>
     <v-btn class="reg mt-15 rounded-pill" variant="outlined">
