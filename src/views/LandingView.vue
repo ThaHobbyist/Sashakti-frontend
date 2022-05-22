@@ -6,12 +6,16 @@
       :cname="courses"
       :jname="jobs"
     />
-    <div class="promo w-75 d-flex flex-column align-center">
-      <div v-if="type === 'Candidate' || type === 'Tutor'">
+    <div class="promo w-75 d-flex flex-column align-center justify-center">
+      <div class="d-flex flex-column align-center" v-if="type === 'Candidate'">
         <CardBox class="tc" :name="courses" :dataSet="courses_dataSet" />
-      </div>
-      <div v-if="type === 'Candidate' || type === 'Employer'">
         <CardBox class="tc" :name="jobs" :dataSet="jobs_dataSet" />
+      </div>
+      <div v-if="type === 'Employer'">
+        <CardBox class="tc" :name="jobs" :dataSet="jobs_dataSet" />
+      </div>
+      <div v-if="type === 'Tutor'">
+        <CardBox class="tc" :name="courses" :dataSet="courses_dataSet" />
       </div>
       <div class="oppur d-flex flex-row ma-10">
         <v-btn class="crs ma-10 rounded-pill" variant="outlined"
@@ -50,7 +54,7 @@ export default {
   components: { CardBox, ProgressBox },
   data() {
     return {
-      type,
+      type: "Candidate",
       courses:
         type == "Candidate"
           ? "Top Courses"
