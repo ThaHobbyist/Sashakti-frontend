@@ -155,20 +155,61 @@ export default {
   },
   methods: {
     async updateProfile(type) {
+      let err;
       switch (type) {
         case "Candidate":
-          /* */
+          ({ err } = await this.$api.updateCandidateProfile({
+            name: this.name,
+            email: this.email,
+            phone: this.phone,
+            address: this.address,
+            city: this.city,
+            state: this.state,
+            zipcode: this.zipcode,
+            country: this.country,
+            qualification: this.qualification,
+          }));
+          if (err) {
+            console.log(err);
+          }
           break;
         case "Tutor":
-          /* */
+          ({ err } = await this.$api.updateTutorProfile({
+            name: this.name,
+            email: this.email,
+            company: this.company,
+            qualifications: this.qualifications,
+            about: this.about,
+            image: this.image,
+          }));
+          if (err) {
+            console.log(err);
+          }
           break;
         case "Employer":
-          /* */
+          ({ err } = await this.$api.updateEmployerProfile({
+            name: this.name,
+            email: this.email,
+            phone: this.phone,
+            address: this.address,
+            city: this.city,
+            state: this.state,
+            zipcode: this.zipcode,
+            country: this.country,
+            company_name: this.company_name,
+            company_description: this.company_description,
+            company_website: this.company_website,
+            company_logo: this.company_logo,
+          }));
+          if (err) {
+            console.log(err);
+          }
           break;
 
         default:
           break;
       }
+      this.$router.push("/dash");
     },
   },
 };

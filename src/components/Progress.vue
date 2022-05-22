@@ -20,12 +20,16 @@
         <v-card
           class="w-50 ma-2 rounded-lg d-flex align-center justify-center"
           variant="outlined"
-          ><v-card-title>Course Data</v-card-title>
+          ><v-card-title v-if="type === 'Candidate' || type === 'Tutor'">{{
+            cname
+          }}</v-card-title>
         </v-card>
         <v-card
           class="w-50 ma-2 rounded-lg d-flex align-center justify-center"
           variant="outlined"
-          ><v-card-title>Jobs Data</v-card-title>
+          ><v-card-title v-if="type === 'Candidate' || type === 'Employer'">{{
+            jname
+          }}</v-card-title>
         </v-card>
       </div>
     </div>
@@ -35,6 +39,7 @@
 <script>
 export default {
   name: "ProgressBox",
+  props: ["type", "cname", "jname"],
   data() {
     return {
       drawer: true,

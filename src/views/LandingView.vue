@@ -1,9 +1,18 @@
 <template>
   <div class="root d-flex flex-row fill-height">
-    <ProgressBox class="w-50 ma-10" />
+    <ProgressBox
+      class="w-50 ma-10"
+      :type="type"
+      :cname="courses"
+      :jname="jobs"
+    />
     <div class="promo w-75 d-flex flex-column align-center">
-      <CardBox class="tc" :name="courses" :dataSet="courses_dataSet" />
-      <CardBox class="tc" :name="jobs" :dataSet="jobs_dataSet" />
+      <div v-if="type === 'Candidate' || type === 'Tutor'">
+        <CardBox class="tc" :name="courses" :dataSet="courses_dataSet" />
+      </div>
+      <div v-if="type === 'Candidate' || type === 'Employer'">
+        <CardBox class="tc" :name="jobs" :dataSet="jobs_dataSet" />
+      </div>
       <div class="oppur d-flex flex-row ma-10">
         <v-btn class="crs ma-10 rounded-pill" variant="outlined"
           ><router-link
@@ -33,13 +42,23 @@
 <script>
 import CardBox from "../components/Cards.vue";
 import ProgressBox from "../components/Progress.vue";
+
+const type = localStorage.getItem("_t");
+
 export default {
   name: "LandingView",
   components: { CardBox, ProgressBox },
   data() {
     return {
-      courses: "Top Courses",
-      jobs: "Top Jobs",
+      type,
+      courses:
+        type == "Candidate"
+          ? "Top Courses"
+          : type == "Tutor"
+          ? "My Courses"
+          : "",
+      jobs:
+        type == "Candidate" ? "Top Jobs" : type == "Employer" ? "My Jobs" : "",
       jobs_dataSet: [
         {
           title: "Detect Images for ML model",
