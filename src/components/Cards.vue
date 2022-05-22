@@ -27,62 +27,7 @@
 <script>
 export default {
   name: "CardBox",
-  props: ["name"],
-  data() {
-    return {
-      dataSet: [
-        {
-          title: "ML Course",
-          Content: "A Short ML course to get started with freelancing",
-        },
-        {
-          title: "CGI with blender",
-          Content:
-            "Get started with basics of blender and start recieving commissions",
-        },
-        {
-          title: "Python Course",
-          Content: "Become A Pythonista in just 30 days",
-        },
-        {
-          title: "Basics of DSA",
-          Content: "Learn the basic of algorithms in just 20 days",
-        },
-        {
-          title: "Basics of DSA",
-          Content: "Learn the basic of algorithms in just 20 days",
-        },
-        {
-          title: "Basics of DSA",
-          Content: "Learn the basic of algorithms in just 20 days",
-        },
-        {
-          title: "Basics of DSA",
-          Content: "Learn the basic of algorithms in just 20 days",
-        },
-        {
-          title: "Basics of DSA",
-          Content: "Learn the basic of algorithms in just 20 days",
-        },
-        {
-          title: "Basics of DSA",
-          Content: "Learn the basic of algorithms in just 20 days",
-        },
-        {
-          title: "Basics of DSA",
-          Content: "Learn the basic of algorithms in just 20 days",
-        },
-        {
-          title: "Basics of DSA",
-          Content: "Learn the basic of algorithms in just 20 days",
-        },
-        {
-          title: "Basics of DSA",
-          Content: "Learn the basic of algorithms in just 20 days",
-        },
-      ],
-    };
-  },
+  props: ["name", "dataSet"],
 };
 </script>
 
