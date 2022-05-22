@@ -20,16 +20,16 @@
         <v-card
           class="w-50 ma-2 rounded-lg d-flex align-center justify-center"
           variant="outlined"
-          ><v-card-title v-if="type === 'Candidate' || type === 'Tutor'">{{
-            cname
-          }}</v-card-title>
+          ><v-card-title v-if="type === 'Candidate' || type === 'Tutor'">
+            {{ cname }}
+          </v-card-title>
         </v-card>
         <v-card
           class="w-50 ma-2 rounded-lg d-flex align-center justify-center"
           variant="outlined"
-          ><v-card-title v-if="type === 'Candidate' || type === 'Employer'">{{
-            jname
-          }}</v-card-title>
+          ><v-card-title v-if="type === 'Candidate' || type === 'Employer'">
+            {{ jname }}
+          </v-card-title>
         </v-card>
       </div>
     </div>
