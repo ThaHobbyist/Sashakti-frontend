@@ -19,7 +19,12 @@
     <div v-if="reg" class="form mx-auto w-75 d-flex flex-column pa-8 my-auto">
       <v-text-field v-model="username" label="Username" variant="outlined">
       </v-text-field>
-      <v-text-field v-model="passwd" label="Password" variant="outlined">
+      <v-text-field
+        v-model="passwd"
+        label="Password"
+        type="password"
+        variant="outlined"
+      >
       </v-text-field>
       <v-btn class="w-auto" @click="_register">Register</v-btn>
     </div>
@@ -29,7 +34,12 @@
     >
       <v-text-field v-model="username" label="Username" variant="outlined">
       </v-text-field>
-      <v-text-field v-model="passwd" label="Password" variant="outlined">
+      <v-text-field
+        v-model="passwd"
+        label="Password"
+        type="password"
+        variant="outlined"
+      >
       </v-text-field>
       <v-btn class="w-auto" @click="_login">Log-In</v-btn>
     </div>
@@ -49,15 +59,15 @@ export default {
   },
   methods: {
     _register() {
-      if(this.$api.register(this.username, this.passwd)){
-        this.$router.push('/profile');
-      };
+      if (this.$api.register(this.username, this.passwd)) {
+        this.$router.push("/profile");
+      }
     },
     _login() {
-      if(this.$api.login(this.username, this.passwd)){
-        this.$router.push('/dash');
-      };
-    },
+      if (this.$api.login(this.username, this.passwd)) {
+        this.$router.push("/dash");
+      }
+    }
   }
 };
 </script>
@@ -75,7 +85,7 @@ export default {
   border-left: 1px white solid;
 }
 
-.optn { 
+.optn {
   cursor: pointer;
   font-size: large;
 }
