@@ -7,7 +7,7 @@
       </div>
     </div>
     <v-btn class="reg mt-15 rounded-pill" variant="outlined">
-      <router-link class="text-white" to="/login" style="text-decoration: none">
+      <router-link class="text-white" to="/dash" style="text-decoration: none">
         GET STARTED <v-icon icon="mdi-arrow-right" />
       </router-link>
     </v-btn>
