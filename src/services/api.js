@@ -165,5 +165,39 @@ export default () => {
       }
       return res.data;
     },
+
+
+    async getCoursesByTutor() {
+      const res = await this.client.get("courses/coursesByTutor");
+      if (res.status != 200) {
+        return { err };
+      }
+      return res.data; 
+    },
+
+    async getJobsByEmployer() {
+      const res = await this.client.get("jobs/jobsByEmployer");
+      if (res.status != 200) {
+        return { err };
+      }
+      return res.data; 
+    },
+
+    async createCourse(course) {
+      const res = await this.client.post("courses/createcourse", course);
+      if (res.status != 201) {
+        return { err };
+      }
+      return res.data;
+    },
+
+    async createJob(job) {
+      const res = await this.client.post("jobs/createjob",job)
+      if (res.status != 201) {
+        return { err };
+      }
+      return res.data;
+    },
+
   };
 };
