@@ -7,6 +7,7 @@ import LoginView from "../views/LoginView.vue";
 import LandingView from "../views/LandingView.vue";
 import CoursesView from "../views/CoursesView.vue";
 import JobsView from "../views/JobsView.vue";
+import ProfileForm from "@/views/ProfileForm.vue";
 
 const routes = [{
         path: "/",
@@ -33,6 +34,11 @@ const routes = [{
         name: "jobs",
         component: JobsView,
     },
+    {
+        path: "/profile",
+        name: "profile",
+        component: ProfileForm,
+    }
 ];
 
 const router = createRouter({
