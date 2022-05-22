@@ -19,11 +19,9 @@
     <div v-if="reg" class="form mx-auto w-75 d-flex flex-column pa-8 my-auto">
       <v-text-field v-model="username" label="Username" variant="outlined">
       </v-text-field>
-      <v-text-field v-model="email" label="Email-ID" variant="outlined">
-      </v-text-field>
       <v-text-field v-model="passwd" label="Password" variant="outlined">
       </v-text-field>
-      <v-btn class="w-auto">Register</v-btn>
+      <v-btn class="w-auto" @click="_register">Register</v-btn>
     </div>
     <div
       v-if="!reg"
@@ -33,23 +31,33 @@
       </v-text-field>
       <v-text-field v-model="passwd" label="Password" variant="outlined">
       </v-text-field>
-      <v-btn class="w-auto">Log-In</v-btn>
+      <v-btn class="w-auto" @click="_login">Log-In</v-btn>
     </div>
   </div>
 </template>
 
 <script>
 /* eslint-disable */
-
 export default {
   name: "AuthBox",
   data() {
     return {
       reg: false,
       username: "",
-      email: "",
       passwd: ""
     };
+  },
+  methods: {
+    _register() {
+      if(this.$api.register(this.username, this.passwd)){
+        this.$router.push('/profile');
+      };
+    },
+    _login() {
+      if(this.$api.login(this.username, this.passwd)){
+        this.$router.push('/dash');
+      };
+    },
   }
 };
 </script>
