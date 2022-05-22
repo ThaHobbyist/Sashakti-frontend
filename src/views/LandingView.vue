@@ -77,7 +77,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .tc {
   width: 60%;
 }
